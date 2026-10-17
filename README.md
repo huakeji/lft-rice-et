@@ -52,6 +52,8 @@ Out-of-sample forecasts of 2018–2020 are available from the authors on request
 
 ## Notes
 
+* Weather and wind texts are kept in Chinese as published (e.g. 多云转小雨, 3-4级): they are model inputs, matched against the vocabularies in `model/*_encoder.json`. All other files are in English; `README_zh.md` is a Chinese version of this README.
+
 * ETo is calculated reference evapotranspiration; ETc is the requirement of a well-watered rice crop. Neither is an irrigation amount, which also depends on rainfall, ponding and percolation.
 * The forecasts reproduce the information content of the messages; skill decreases with lead. In the Southwest and Northwest rice zones, models trained without local stations transferred poorly; the released national models were trained with all zones.
 * Public forecast messages are not redistributed with this package.
