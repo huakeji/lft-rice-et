@@ -1,0 +1,17 @@
+[
+ {
+  "run": "lft_2020fold_s0",
+  "sequences": 14058,
+  "max_abs_diff": 0.0
+ },
+ {
+  "run": "lft_2020fold_s1",
+  "sequences": 14058,
+  "max_abs_diff": 0.0
+ },
+ {
+  "run": "lft_2020fold_s2",
+  "sequences": 14058,
+  "max_abs_diff": 0.0
+ }
+]

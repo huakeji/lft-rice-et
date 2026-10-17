@@ -1,0 +1,10 @@
+{
+ "stations": 30,
+ "sequences": 10574,
+ "input_x_mismatches": 0,
+ "input_text_mismatches": 0,
+ "max_abs_diff_lft": 1.430511474609375e-06,
+ "max_abs_diff_gru": 1.430511474609375e-06,
+ "max_abs_diff_ensemble": 9.5367431640625e-07,
+ "max_abs_diff_quantiles": 1.9073486328125e-06
+}

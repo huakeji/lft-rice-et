@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lft-rice-et"
+version = "1.0.0"
+description = "Seven-day reference and rice evapotranspiration forecasts from Chinese public weather forecasts"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["numpy>=1.24", "pandas>=2.0", "torch>=2.1"]
+
+[project.scripts]
+lft-et = "lft_et.cli:main"
+
+[tool.setuptools]
+packages = ["lft_et"]

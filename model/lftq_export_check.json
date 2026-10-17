@@ -1,0 +1,7 @@
+[
+ {
+  "run": "lftq_2020fold",
+  "sequences": 14058,
+  "max_abs_diff": 0.0
+ }
+]

@@ -1,0 +1,34 @@
+{
+ "family": "lftq",
+ "lags": 6,
+ "config": {
+  "candidate": "legacy_final_recipe",
+  "width": 64,
+  "layers": 2,
+  "heads": 8,
+  "dropout": 0.1,
+  "lr": 0.0014820326403797081,
+  "weight_decay": 0.0001,
+  "optimizer": "Adam",
+  "scheduler": "cosine_warmup",
+  "warmup_epochs": 3,
+  "batch_size": 1024,
+  "max_epochs": 60,
+  "patience": 15,
+  "quantiles": [
+   0.05,
+   0.1,
+   0.25,
+   0.5,
+   0.75,
+   0.9,
+   0.95
+  ]
+ },
+ "seeds": [
+  0
+ ],
+ "test_2020_pooled_rmse": [
+  0.7611525654792786
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "family": "gru",
+ "lags": 0,
+ "config": {
+  "candidate": "legacy_final_recipe",
+  "width": 384,
+  "layers": 3,
+  "heads": 4,
+  "dropout": 0.1,
+  "lr": 0.0011807762434890778,
+  "weight_decay": 1e-05,
+  "optimizer": "Adam",
+  "scheduler": "cosine_warmup",
+  "warmup_epochs": 3,
+  "batch_size": 2048,
+  "max_epochs": 60,
+  "patience": 15
+ },
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "test_2020_pooled_rmse": [
+  0.7761349678039551,
+  0.769338846206665,
+  0.7620419859886169
+ ]
+}

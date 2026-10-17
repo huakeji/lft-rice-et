@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "lft-rice-et: seven-day reference and rice evapotranspiration forecasts from public weather forecasts"
+version: 1.0.0
+license: MIT
+authors:
+  - {family-names: Hua, given-names: Keji}
