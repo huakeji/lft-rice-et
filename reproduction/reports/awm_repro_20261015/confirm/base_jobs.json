@@ -1,0 +1,376 @@
+{
+ "stage": "confirm-base",
+ "selection": "top-k by 2019 val on the 195-station search subset; confirmed on all stations, outer 2020 recorded only",
+ "selected": {
+  "pft": [
+   {
+    "val_subset": 0.7531,
+    "search_dir": "reports/awm_repro_20261015/hpsearch/base/pft_c06"
+   },
+   {
+    "val_subset": 0.7535,
+    "search_dir": "reports/awm_repro_20261015/hpsearch/base/pft_c03"
+   }
+  ],
+  "gru": [
+   {
+    "val_subset": 0.751,
+    "search_dir": "reports/awm_repro_20261015/hpsearch/base/gru_c07"
+   },
+   {
+    "val_subset": 0.7527,
+    "search_dir": "reports/awm_repro_20261015/hpsearch/base/gru_c06"
+   }
+  ],
+  "cbm": [
+   {
+    "val_subset": 0.7571,
+    "search_dir": "reports/awm_repro_20261015/hpsearch/base/cbm_c07"
+   },
+   {
+    "val_subset": 0.7593,
+    "search_dir": "reports/awm_repro_20261015/hpsearch/base/cbm_c04"
+   }
+  ],
+  "mlp": [
+   {
+    "val_subset": 0.7577,
+    "search_dir": "reports/awm_repro_20261015/hpsearch/base/mlp_c04"
+   },
+   {
+    "val_subset": 0.7602,
+    "search_dir": "reports/awm_repro_20261015/hpsearch/base/mlp_c03"
+   }
+  ]
+ },
+ "jobs": [
+  {
+   "model": "pft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 30,
+   "config": {
+    "width": 256,
+    "layers": 1,
+    "heads": 4,
+    "emb_dim": 32,
+    "dropout": 0.0,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0005937828437952515,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/pft_c06_s0"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 30,
+   "config": {
+    "width": 256,
+    "layers": 1,
+    "heads": 4,
+    "emb_dim": 32,
+    "dropout": 0.0,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0005937828437952515,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/pft_c06_s1"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 30,
+   "config": {
+    "width": 192,
+    "layers": 3,
+    "heads": 4,
+    "emb_dim": 16,
+    "dropout": 0.1,
+    "weight_decay": 0.0,
+    "batch_size": 256,
+    "lr": 0.00030002942736529257,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/pft_c03_s0"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 30,
+   "config": {
+    "width": 192,
+    "layers": 3,
+    "heads": 4,
+    "emb_dim": 16,
+    "dropout": 0.1,
+    "weight_decay": 0.0,
+    "batch_size": 256,
+    "lr": 0.00030002942736529257,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/pft_c03_s1"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 384,
+    "layers": 3,
+    "dropout": 0.1,
+    "weight_decay": 1e-05,
+    "batch_size": 2048,
+    "lr": 0.0011807762434890778,
+    "heads": 4,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/gru_c07_s0"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "width": 384,
+    "layers": 3,
+    "dropout": 0.1,
+    "weight_decay": 1e-05,
+    "batch_size": 2048,
+    "lr": 0.0011807762434890778,
+    "heads": 4,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/gru_c07_s1"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 30,
+   "config": {
+    "width": 128,
+    "layers": 3,
+    "dropout": 0.1,
+    "weight_decay": 1e-05,
+    "batch_size": 256,
+    "lr": 0.0010230214019181331,
+    "heads": 4,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/gru_c06_s0"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 30,
+   "config": {
+    "width": 128,
+    "layers": 3,
+    "dropout": 0.1,
+    "weight_decay": 1e-05,
+    "batch_size": 256,
+    "lr": 0.0010230214019181331,
+    "heads": 4,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/gru_c06_s1"
+  },
+  {
+   "model": "cbm",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 15,
+   "config": {
+    "cbm_width": 96,
+    "dropout": 0.0,
+    "weight_decay": 0.0,
+    "batch_size": 256,
+    "lr": 0.00034386069515468406,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "warmup_epochs": 1,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/cbm_c07_s0"
+  },
+  {
+   "model": "cbm",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 15,
+   "config": {
+    "cbm_width": 96,
+    "dropout": 0.0,
+    "weight_decay": 0.0,
+    "batch_size": 256,
+    "lr": 0.00034386069515468406,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "warmup_epochs": 1,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/cbm_c07_s1"
+  },
+  {
+   "model": "cbm",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 30,
+   "config": {
+    "cbm_width": 128,
+    "dropout": 0.2,
+    "weight_decay": 1e-05,
+    "batch_size": 2048,
+    "lr": 0.0006942953594605502,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/cbm_c04_s0"
+  },
+  {
+   "model": "cbm",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 30,
+   "config": {
+    "cbm_width": 128,
+    "dropout": 0.2,
+    "weight_decay": 1e-05,
+    "batch_size": 2048,
+    "lr": 0.0006942953594605502,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/cbm_c04_s1"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 1024,
+    "layers": 2,
+    "dropout": 0.0,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "lr": 0.0006544149233538825,
+    "heads": 4,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/mlp_c04_s0"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "width": 1024,
+    "layers": 2,
+    "dropout": 0.0,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "lr": 0.0006544149233538825,
+    "heads": 4,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/mlp_c04_s1"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 30,
+   "config": {
+    "width": 512,
+    "layers": 3,
+    "dropout": 0.2,
+    "weight_decay": 0.0,
+    "batch_size": 1024,
+    "lr": 0.00022587336394606656,
+    "heads": 4,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/mlp_c03_s0"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 30,
+   "config": {
+    "width": 512,
+    "layers": 3,
+    "dropout": 0.2,
+    "weight_decay": 0.0,
+    "batch_size": 1024,
+    "lr": 0.00022587336394606656,
+    "heads": 4,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/confirm/mlp_c03_s1"
+  }
+ ]
+}

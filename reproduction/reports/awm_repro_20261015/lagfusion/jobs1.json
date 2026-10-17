@@ -1,0 +1,96 @@
+{
+ "stage": "lagfusion-1",
+ "purpose": "time-lagged public issues (6 earlier issues) vs stage B base runs, same config/seed/origins; paired by key",
+ "baseline_dirs": {
+  "pft_y2020": "reports/awm_repro_20261015/bakeoff/stageB/pft_y2020_s0",
+  "gru_y2020": "reports/awm_repro_20261015/bakeoff/stageB/gru_y2020_s0",
+  "pft_y2019": "reports/awm_repro_20261015/bakeoff/stageB/pft_y2019_s0",
+  "gru_y2019": "reports/awm_repro_20261015/bakeoff/stageB/gru_y2019_s0"
+ },
+ "jobs": [
+  {
+   "model": "pft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "lags": 6,
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/lagfusion/pft_lag6_y2020_s0"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0002
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "lags": 6,
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/lagfusion/gru_lag6_y2020_s0"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2019,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "lags": 6,
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/lagfusion/pft_lag6_y2019_s0"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2019,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0002
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "lags": 6,
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/lagfusion/gru_lag6_y2019_s0"
+  }
+ ]
+}

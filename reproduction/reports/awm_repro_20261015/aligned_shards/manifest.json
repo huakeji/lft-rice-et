@@ -1,0 +1,8 @@
+{
+ "match_origins": "reports/v11_audit_20260909/same_day_shards_20260912_full",
+ "mapping": "lead L input = raw JSON key L (valid origin+L-1); label = reference ET0 at origin+L-1",
+ "stations_with_shards": 583,
+ "sequences": 1067137,
+ "seconds": 248.32766222953796,
+ "code_sha256": "0f30b20b16d489fbc17cba784f91766b9389cf97418ff8ca37cbd573dd8b7e5a"
+}

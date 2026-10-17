@@ -1,0 +1,198 @@
+{
+ "stage": "peak-uncertainty",
+ "model": "lft_c03 light",
+ "variants": "mse | pinball 7 quantiles (median point) | peak-weighted mse alpha 1/3 (weight on training targets >= train q90)",
+ "selection": "val 2019/2018 only; post-hoc calibration fitted on val year",
+ "jobs": [
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0014820326403797081,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/peak_unc/mse_y2020"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0014820326403797081,
+    "warmup_epochs": 3,
+    "patience": 15,
+    "quantiles": [
+     0.05,
+     0.1,
+     0.25,
+     0.5,
+     0.75,
+     0.9,
+     0.95
+    ]
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/peak_unc/quant_y2020"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0014820326403797081,
+    "warmup_epochs": 3,
+    "patience": 15,
+    "peak_alpha": 1.0
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/peak_unc/peak1_y2020"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0014820326403797081,
+    "warmup_epochs": 3,
+    "patience": 15,
+    "peak_alpha": 3.0
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/peak_unc/peak3_y2020"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2019,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0014820326403797081,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/peak_unc/mse_y2019"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2019,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0014820326403797081,
+    "warmup_epochs": 3,
+    "patience": 15,
+    "quantiles": [
+     0.05,
+     0.1,
+     0.25,
+     0.5,
+     0.75,
+     0.9,
+     0.95
+    ]
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/peak_unc/quant_y2019"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2019,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0014820326403797081,
+    "warmup_epochs": 3,
+    "patience": 15,
+    "peak_alpha": 1.0
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/peak_unc/peak1_y2019"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2019,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0014820326403797081,
+    "warmup_epochs": 3,
+    "patience": 15,
+    "peak_alpha": 3.0
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/peak_unc/peak3_y2019"
+  }
+ ]
+}

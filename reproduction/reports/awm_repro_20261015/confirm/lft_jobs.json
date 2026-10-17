@@ -1,0 +1,102 @@
+{
+ "stage": "confirm-lft",
+ "selection": "top-k by 2019 val on the 195-station search subset; confirmed on all stations, outer 2020 recorded only",
+ "selected": {
+  "lft": [
+   {
+    "val_subset": 0.7375,
+    "search_dir": "reports/awm_repro_20261015/hpsearch/lft/lft_c03"
+   },
+   {
+    "val_subset": 0.7398,
+    "search_dir": "reports/awm_repro_20261015/hpsearch/lft/lft_c00"
+   }
+  ]
+ },
+ "jobs": [
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0014820326403797081,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/confirm/lft_c03_s0"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0014820326403797081,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/confirm/lft_c03_s1"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 192,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.2,
+    "weight_decay": 0.0001,
+    "batch_size": 2048,
+    "lr": 0.00027757605516203133,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/confirm/lft_c00_s0"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "width": 192,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.2,
+    "weight_decay": 0.0001,
+    "batch_size": 2048,
+    "lr": 0.00027757605516203133,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/confirm/lft_c00_s1"
+  }
+ ]
+}

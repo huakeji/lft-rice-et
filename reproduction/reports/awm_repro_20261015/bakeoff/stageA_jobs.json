@@ -1,0 +1,224 @@
+{
+ "stage": "A",
+ "selection": "val_rmse (2019) only; 2020 recorded not used",
+ "shards": "reports/awm_repro_20261015/aligned_shards",
+ "order": "global",
+ "jobs": [
+  {
+   "model": "cbm",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageA/cbm_lr0.0002"
+  },
+  {
+   "model": "cbm",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageA/cbm_lr0.0006"
+  },
+  {
+   "model": "cbm",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageA/cbm_lr0.002"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageA/pft_lr0.0002"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageA/pft_lr0.0006"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageA/pft_lr0.002"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageA/gru_lr0.0002"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageA/gru_lr0.0006"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageA/gru_lr0.002"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageA/mlp_lr0.0002"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageA/mlp_lr0.0006"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageA/mlp_lr0.002"
+  }
+ ]
+}

@@ -67,6 +67,8 @@ python -m lft_et.cli --input examples/example_messages.json --output forecast.cs
 
 2018–2020 年的样本外回算预报可向作者索取。
 
+训练、评估和出图脚本，以及冻结的任务清单和站点名单，见 [`reproduction/`](reproduction/README.md)（仅代码，输入数据受限，不随包发布）。
+
 ## 说明
 
 - ETₒ 是计算得到的参考值，ETc 是充分供水稻田的需水量，二者都不是灌水量。灌水量还取决于降雨、田面水层和渗漏。

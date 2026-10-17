@@ -1,0 +1,132 @@
+{
+ "stage": "lag ablation",
+ "note": "LFT with lags masked (same architecture) and GRU with lagged inputs; 2020 confirmatory fold; frozen configs",
+ "jobs": [
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 192,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.2,
+    "weight_decay": 0.0001,
+    "batch_size": 2048,
+    "lr": 0.00027757605516203133,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards_nolag",
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/ablation/lft_nolag_y2020_s0"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 384,
+    "layers": 3,
+    "dropout": 0.1,
+    "weight_decay": 1e-05,
+    "batch_size": 2048,
+    "lr": 0.0011807762434890778,
+    "heads": 4,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/ablation/gru_lag6_y2020_s0",
+   "lags": 6
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "width": 192,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.2,
+    "weight_decay": 0.0001,
+    "batch_size": 2048,
+    "lr": 0.00027757605516203133,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards_nolag",
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/ablation/lft_nolag_y2020_s1"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "width": 384,
+    "layers": 3,
+    "dropout": 0.1,
+    "weight_decay": 1e-05,
+    "batch_size": 2048,
+    "lr": 0.0011807762434890778,
+    "heads": 4,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/ablation/gru_lag6_y2020_s1",
+   "lags": 6
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 2,
+   "max_epochs": 60,
+   "config": {
+    "width": 192,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.2,
+    "weight_decay": 0.0001,
+    "batch_size": 2048,
+    "lr": 0.00027757605516203133,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards_nolag",
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/ablation/lft_nolag_y2020_s2"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2020,
+   "seed": 2,
+   "max_epochs": 60,
+   "config": {
+    "width": 384,
+    "layers": 3,
+    "dropout": 0.1,
+    "weight_decay": 1e-05,
+    "batch_size": 2048,
+    "lr": 0.0011807762434890778,
+    "heads": 4,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/ablation/gru_lag6_y2020_s2",
+   "lags": 6
+  }
+ ]
+}

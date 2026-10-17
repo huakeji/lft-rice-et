@@ -1,0 +1,678 @@
+{
+ "stage": "B",
+ "selection": "per-model lr chosen in stage A by 2019 val only (outer 2020 fold); configs frozen before any 2018/2019 outer evaluation",
+ "selected": {
+  "cbm": {
+   "val_2019": 0.7598216533660889,
+   "lr": 0.0006,
+   "stageA_dir": "reports/awm_repro_20261015/bakeoff/stageA/cbm_lr0.0006"
+  },
+  "pft": {
+   "val_2019": 0.7485452890396118,
+   "lr": 0.0006,
+   "stageA_dir": "reports/awm_repro_20261015/bakeoff/stageA/pft_lr0.0006"
+  },
+  "gru": {
+   "val_2019": 0.7547311782836914,
+   "lr": 0.0002,
+   "stageA_dir": "reports/awm_repro_20261015/bakeoff/stageA/gru_lr0.0002"
+  },
+  "mlp": {
+   "val_2019": 0.7652060985565186,
+   "lr": 0.002,
+   "stageA_dir": "reports/awm_repro_20261015/bakeoff/stageA/mlp_lr0.002"
+  }
+ },
+ "shards": "reports/awm_repro_20261015/aligned_shards",
+ "order": "global",
+ "jobs": [
+  {
+   "model": "pft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/pft_y2020_s0"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/gru_y2020_s0"
+  },
+  {
+   "model": "cbm",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/cbm_y2020_s0"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/mlp_y2020_s0"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2019,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/pft_y2019_s0"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2019,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/gru_y2019_s0"
+  },
+  {
+   "model": "cbm",
+   "outer_year": 2019,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/cbm_y2019_s0"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2019,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/mlp_y2019_s0"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2018,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/pft_y2018_s0"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2018,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/gru_y2018_s0"
+  },
+  {
+   "model": "cbm",
+   "outer_year": 2018,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/cbm_y2018_s0"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2018,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/mlp_y2018_s0"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/pft_y2020_s1"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/gru_y2020_s1"
+  },
+  {
+   "model": "cbm",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/cbm_y2020_s1"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/mlp_y2020_s1"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2019,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/pft_y2019_s1"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2019,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/gru_y2019_s1"
+  },
+  {
+   "model": "cbm",
+   "outer_year": 2019,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/cbm_y2019_s1"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2019,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/mlp_y2019_s1"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2018,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/pft_y2018_s1"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2018,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/gru_y2018_s1"
+  },
+  {
+   "model": "cbm",
+   "outer_year": 2018,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/cbm_y2018_s1"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2018,
+   "seed": 1,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/mlp_y2018_s1"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2020,
+   "seed": 2,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/pft_y2020_s2"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2020,
+   "seed": 2,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/gru_y2020_s2"
+  },
+  {
+   "model": "cbm",
+   "outer_year": 2020,
+   "seed": 2,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/cbm_y2020_s2"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2020,
+   "seed": 2,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/mlp_y2020_s2"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2019,
+   "seed": 2,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/pft_y2019_s2"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2019,
+   "seed": 2,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/gru_y2019_s2"
+  },
+  {
+   "model": "cbm",
+   "outer_year": 2019,
+   "seed": 2,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/cbm_y2019_s2"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2019,
+   "seed": 2,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/mlp_y2019_s2"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2018,
+   "seed": 2,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/pft_y2018_s2"
+  },
+  {
+   "model": "gru",
+   "outer_year": 2018,
+   "seed": 2,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/gru_y2018_s2"
+  },
+  {
+   "model": "cbm",
+   "outer_year": 2018,
+   "seed": 2,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0006
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/cbm_y2018_s2"
+  },
+  {
+   "model": "mlp",
+   "outer_year": 2018,
+   "seed": 2,
+   "max_epochs": 60,
+   "config": {
+    "warmup_epochs": 3,
+    "patience": 15,
+    "batch_size": 1024,
+    "weight_decay": 1e-05,
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.002
+   },
+   "out_dir": "reports/awm_repro_20261015/bakeoff/stageB/mlp_y2018_s2"
+  }
+ ]
+}

@@ -1,0 +1,197 @@
+{
+ "stage": "formal",
+ "model": "pft",
+ "frozen_from": "pft_c06",
+ "rule": "config with lowest full-station 2019 val in confirmation",
+ "jobs": [
+  {
+   "model": "pft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 30,
+   "config": {
+    "width": 256,
+    "layers": 1,
+    "heads": 4,
+    "emb_dim": 32,
+    "dropout": 0.0,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0005937828437952515,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/formal/pft_y2020_s0"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2020,
+   "seed": 1,
+   "max_epochs": 30,
+   "config": {
+    "width": 256,
+    "layers": 1,
+    "heads": 4,
+    "emb_dim": 32,
+    "dropout": 0.0,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0005937828437952515,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/formal/pft_y2020_s1"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2020,
+   "seed": 2,
+   "max_epochs": 30,
+   "config": {
+    "width": 256,
+    "layers": 1,
+    "heads": 4,
+    "emb_dim": 32,
+    "dropout": 0.0,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0005937828437952515,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/formal/pft_y2020_s2"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2019,
+   "seed": 0,
+   "max_epochs": 30,
+   "config": {
+    "width": 256,
+    "layers": 1,
+    "heads": 4,
+    "emb_dim": 32,
+    "dropout": 0.0,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0005937828437952515,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/formal/pft_y2019_s0"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2019,
+   "seed": 1,
+   "max_epochs": 30,
+   "config": {
+    "width": 256,
+    "layers": 1,
+    "heads": 4,
+    "emb_dim": 32,
+    "dropout": 0.0,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0005937828437952515,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/formal/pft_y2019_s1"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2019,
+   "seed": 2,
+   "max_epochs": 30,
+   "config": {
+    "width": 256,
+    "layers": 1,
+    "heads": 4,
+    "emb_dim": 32,
+    "dropout": 0.0,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0005937828437952515,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/formal/pft_y2019_s2"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2018,
+   "seed": 0,
+   "max_epochs": 30,
+   "config": {
+    "width": 256,
+    "layers": 1,
+    "heads": 4,
+    "emb_dim": 32,
+    "dropout": 0.0,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0005937828437952515,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/formal/pft_y2018_s0"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2018,
+   "seed": 1,
+   "max_epochs": 30,
+   "config": {
+    "width": 256,
+    "layers": 1,
+    "heads": 4,
+    "emb_dim": 32,
+    "dropout": 0.0,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0005937828437952515,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/formal/pft_y2018_s1"
+  },
+  {
+   "model": "pft",
+   "outer_year": 2018,
+   "seed": 2,
+   "max_epochs": 30,
+   "config": {
+    "width": 256,
+    "layers": 1,
+    "heads": 4,
+    "emb_dim": 32,
+    "dropout": 0.0,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0005937828437952515,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/aligned_shards",
+   "order": "global",
+   "out_dir": "reports/awm_repro_20261015/formal/pft_y2018_s2"
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "stage": "review extras: untuned zero-shot all zones; repeated scaling holdouts",
+ "jobs": [
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "lags": 6,
+   "order": "global",
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "max_epochs": 30,
+   "config": {
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "weight_decay": 1e-05,
+    "batch_size": 1024,
+    "lr": 0.001,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "train_stations": "reports/awm_repro_20261015/group/lists/not_R1",
+   "eval_stations": "reports/awm_repro_20261015/group/lists/zone_R1",
+   "out_dir": "reports/awm_repro_20261015/group/s0/U_lzo_R1_default"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "lags": 6,
+   "order": "global",
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "max_epochs": 30,
+   "config": {
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "weight_decay": 1e-05,
+    "batch_size": 1024,
+    "lr": 0.001,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "train_stations": "reports/awm_repro_20261015/group/lists/not_R4",
+   "eval_stations": "reports/awm_repro_20261015/group/lists/zone_R4",
+   "out_dir": "reports/awm_repro_20261015/group/s0/U_lzo_R4_default"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "lags": 6,
+   "order": "global",
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "max_epochs": 30,
+   "config": {
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "weight_decay": 1e-05,
+    "batch_size": 1024,
+    "lr": 0.001,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "train_stations": "reports/awm_repro_20261015/group/lists/not_R5",
+   "eval_stations": "reports/awm_repro_20261015/group/lists/zone_R5",
+   "out_dir": "reports/awm_repro_20261015/group/s0/U_lzo_R5_default"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "lags": 6,
+   "order": "global",
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "max_epochs": 30,
+   "config": {
+    "width": 128,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "weight_decay": 1e-05,
+    "batch_size": 1024,
+    "lr": 0.001,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "train_stations": "reports/awm_repro_20261015/group/lists/not_R6",
+   "eval_stations": "reports/awm_repro_20261015/group/lists/zone_R6",
+   "out_dir": "reports/awm_repro_20261015/group/s0/U_lzo_R6_default"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "lags": 6,
+   "order": "global",
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0014820326403797081,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "train_stations": "reports/awm_repro_20261015/group/lists/scale_train_200_d8",
+   "eval_stations": "reports/awm_repro_20261015/group/lists/scale_holdout_d8",
+   "out_dir": "reports/awm_repro_20261015/group/s0/S_scale_200_d8"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "lags": 6,
+   "order": "global",
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0014820326403797081,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "train_stations": "reports/awm_repro_20261015/group/lists/scale_train_484_d8",
+   "eval_stations": "reports/awm_repro_20261015/group/lists/scale_holdout_d8",
+   "out_dir": "reports/awm_repro_20261015/group/s0/S_scale_484_d8"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "lags": 6,
+   "order": "global",
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0014820326403797081,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "train_stations": "reports/awm_repro_20261015/group/lists/scale_train_200_d9",
+   "eval_stations": "reports/awm_repro_20261015/group/lists/scale_holdout_d9",
+   "out_dir": "reports/awm_repro_20261015/group/s0/S_scale_200_d9"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "lags": 6,
+   "order": "global",
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0014820326403797081,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "train_stations": "reports/awm_repro_20261015/group/lists/scale_train_484_d9",
+   "eval_stations": "reports/awm_repro_20261015/group/lists/scale_holdout_d9",
+   "out_dir": "reports/awm_repro_20261015/group/s0/S_scale_484_d9"
+  }
+ ]
+}

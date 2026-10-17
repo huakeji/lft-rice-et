@@ -1,0 +1,271 @@
+{
+ "stage": "hpsearch-lft",
+ "selection": "val_rmse on 2019 (outer 2020 fold); outer metrics on the subset are recorded but never used",
+ "station_subset": 195,
+ "jobs": [
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 192,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.2,
+    "weight_decay": 0.0001,
+    "batch_size": 2048,
+    "lr": 0.00027757605516203133,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "station_subset": 195,
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/hpsearch/lft/lft_c00"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 1,
+    "heads": 8,
+    "dropout": 0.2,
+    "weight_decay": 0.0,
+    "batch_size": 512,
+    "lr": 0.001504416869633315,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "station_subset": 195,
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/hpsearch/lft/lft_c01"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.05,
+    "weight_decay": 1e-05,
+    "batch_size": 512,
+    "lr": 0.0004543930408214451,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "station_subset": 195,
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/hpsearch/lft/lft_c02"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 2,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "lr": 0.0014820326403797081,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "station_subset": 195,
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/hpsearch/lft/lft_c03"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 192,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.2,
+    "weight_decay": 1e-05,
+    "batch_size": 256,
+    "lr": 0.0008031474204486767,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "station_subset": 195,
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/hpsearch/lft/lft_c04"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 30,
+   "config": {
+    "width": 64,
+    "layers": 1,
+    "heads": 4,
+    "dropout": 0.05,
+    "weight_decay": 0.0,
+    "batch_size": 256,
+    "lr": 0.0004882506488274567,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "station_subset": 195,
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/hpsearch/lft/lft_c05"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 15,
+   "config": {
+    "width": 192,
+    "layers": 3,
+    "heads": 8,
+    "dropout": 0.1,
+    "weight_decay": 1e-05,
+    "batch_size": 1024,
+    "lr": 0.00023206495030807069,
+    "warmup_epochs": 1,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "station_subset": 195,
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/hpsearch/lft/lft_c06"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 128,
+    "layers": 3,
+    "heads": 4,
+    "dropout": 0.0,
+    "weight_decay": 0.0,
+    "batch_size": 2048,
+    "lr": 0.00019784289385519924,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "station_subset": 195,
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/hpsearch/lft/lft_c07"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 30,
+   "config": {
+    "width": 192,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.0,
+    "weight_decay": 0.0001,
+    "batch_size": 2048,
+    "lr": 0.00024847152215728014,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "station_subset": 195,
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/hpsearch/lft/lft_c08"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 3,
+    "heads": 8,
+    "dropout": 0.0,
+    "weight_decay": 0.0001,
+    "batch_size": 2048,
+    "lr": 0.0008809268036239519,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "station_subset": 195,
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/hpsearch/lft/lft_c09"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 60,
+   "config": {
+    "width": 64,
+    "layers": 3,
+    "heads": 4,
+    "dropout": 0.0,
+    "weight_decay": 0.0,
+    "batch_size": 1024,
+    "lr": 0.001936751555255496,
+    "warmup_epochs": 3,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "station_subset": 195,
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/hpsearch/lft/lft_c10"
+  },
+  {
+   "model": "lft",
+   "outer_year": 2020,
+   "seed": 0,
+   "max_epochs": 15,
+   "config": {
+    "width": 128,
+    "layers": 3,
+    "heads": 4,
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "lr": 0.000373748253944988,
+    "warmup_epochs": 1,
+    "patience": 15
+   },
+   "shards_dir": "reports/awm_repro_20261015/lagged_shards",
+   "station_subset": 195,
+   "order": "global",
+   "lags": 6,
+   "out_dir": "reports/awm_repro_20261015/hpsearch/lft/lft_c11"
+  }
+ ]
+}

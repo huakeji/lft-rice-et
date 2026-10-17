@@ -50,6 +50,8 @@ For a site outside the station list, give its latitude, longitude, altitude and 
 
 Out-of-sample forecasts of 2018–2020 are available from the authors on request.
 
+Training, evaluation and figure scripts, with the frozen job manifests and station lists, are in [`reproduction/`](reproduction/README.md) (code only; the input data are restricted).
+
 ## Notes
 
 * Weather and wind texts are kept in Chinese as published (e.g. 多云转小雨, 3-4级): they are model inputs, matched against the vocabularies in `model/*_encoder.json`. All other files are in English; `README_zh.md` is a Chinese version of this README.
